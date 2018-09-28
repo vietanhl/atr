@@ -9,6 +9,17 @@ router.get('/', function(req, res, next) {
 module.exports = router;
 
 
+async function start(){
+  // const { Client } = require('pg')
+  // const client = new Client()
+  
+  // await client.connect()
+ 
+  // const res = await client.query('SELECT $1::text as message', ['Hello world!'])
+  // console.log(res.rows[0].message) // Hello world!
+  console.log('Loggin in function')
+  await client.end()
 
+}
 
-console.log("Something sql.js")
+start()
